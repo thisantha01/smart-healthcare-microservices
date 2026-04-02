@@ -1,10 +1,12 @@
 package com.healthcare.doctor_service.service;
 
-import com.healthcare.doctor_service.entity.Prescription;
+import com.healthcare.doctor_service.dto.PrescriptionDTO;
+import com.healthcare.doctor_service.dto.PrescriptionRequestDTO;
 
 import java.util.List;
 
 public interface PrescriptionService {
-    Prescription save(Prescription prescription);
-    List<Prescription> getByPatient(Long patientId);
+    PrescriptionDTO createPrescription(PrescriptionRequestDTO prescriptionDTO);
+    List<PrescriptionDTO> getPrescriptionsByPatientId(Long patientId);
+    List<PrescriptionDTO> getPrescriptionsByDoctorId(Long doctorId);
 }
