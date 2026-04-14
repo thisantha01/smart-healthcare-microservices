@@ -1,10 +1,12 @@
 package com.healthcare.doctor_service.service;
 
-import com.healthcare.doctor_service.entity.Schedule;
+import com.healthcare.doctor_service.dto.ScheduleDTO;
 
 import java.util.List;
 
 public interface ScheduleService {
-    Schedule saveSchedule(Schedule schedule);
-    List<Schedule> getByDoctor(Long doctorId);
+    ScheduleDTO createSchedule(ScheduleDTO scheduleDTO);
+    List<ScheduleDTO> getScheduleByDoctorId(Long doctorId);
+    ScheduleDTO updateSchedule(Long id, ScheduleDTO scheduleDTO);
+    void deleteSchedule(Long id);
 }
